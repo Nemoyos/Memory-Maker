@@ -1,0 +1,43 @@
+body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    padding-top: 10%;
+}
+.titulo_login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+img {
+    height: auto;
+    width: auto;
+    max-height: 200px;
+    max-width: 300px;
+}
+.hard {
+    color: #292828;
+}
+.nome{
+    border: 3px solid black;
+    border-radius: 3px;
+    height: 25px;
+    outline: none;
+}
+.button {
+    height: 30px;
+    width: 70px;
+    color: white;
+    background-color: red;
+    border: 3px solid black;
+    cursor: pointer;
+    
+}
+.button:disabled {  /*efeito de botão desabilitado */
+    background-color: grey;
+    color: #aaa;
+    cursor: auto;
+
+}
+

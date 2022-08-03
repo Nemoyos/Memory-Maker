@@ -1,0 +1,58 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 60px;
+    width: 100%;
+    max-width: 800px;
+    margin: 162px;
+}
+
+/* .card {                (fazer um role aparecer)
+    width: 100%;
+    height: 200px;
+    background-color: black;
+} */
+.card{
+    aspect-ratio: 3/4; /* cria formas geometricas precisas */
+    width: 125%;
+    height: 250px;
+    background-color: #333;
+    border-radius: 5px;
+    position:relative; /* força oque esta dentro a seguir oque esta aqui */
+    transition: all 500ms ease; /*Fazer algo flipar no CSS */
+    transform-style: preserve-3d; /*apoio do flip, necessario pra mostrar a carta*/
+    border: 2px solid black;
+
+}
+
+.reveal-card {
+
+    transform: rotateY(180deg);
+
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    background-size: cover;
+    background-position: center; /*pra deixar a imagem da carta centralizada*/
+    transition: all 400ms ease;
+    
+    
+}
+
+.front {
+    transform: rotateY(180deg);
+    
+    
+}
+.back{
+    background-image: url('../imagens/pokemon-illustration-colorido-characters-android-wallpaper-whatsapp-android-iphone.jpg');
+    backface-visibility: hidden; /*esconder o verso do verso */
+    
+}
+.disabled-card {
+    filter: saturate(0);
+    opacity: 0.5;
+}
